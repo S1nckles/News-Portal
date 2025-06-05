@@ -3,6 +3,8 @@ Theme Name: MyTheme
 Author: Andrii Ilynych
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
 
 *{
 	padding: 0;
@@ -40,3 +42,25 @@ ul li{list-style: none;}
 img{vertical-align: top;}
     
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/* General Styles */
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--background-color);
+}
+
+:root{
+	--primary-color: #F8F8F8;
+	--secondary-color: #444444;
+	--footer-color: #949494;
+	--background-color: #FDFDFD;
+	--title-color: #121221;
+	--read-more-color: #121221;
+}
+
+.container {
+	max-width: 1335px;
+	margin: 0 auto;
+	padding: 32px 0;
+}
