@@ -4,7 +4,11 @@
 
 // Enqueue styles and scripts
 
-function my_custom_scripts() {
-    wp_enqueue_style('style', get_stylesheet_uri());
+function mytheme_enqueue_scripts() {
+    wp_enqueue_style('main-style', get_stylesheet_uri());
+
+    wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/burger-menu.js', array(), false, true);
+    wp_enqueue_script('search', get_template_directory_uri() . '/assets/js/search.js', array(), false, true);
+
 }
-add_action('wp_enqueue_scripts', 'my_custom_scripts');
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_scripts');
