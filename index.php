@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Portal</title>
-</head>
-<body>
-<header>
-    <nav>
-      <h1>News <span>Portal</span></h1>
-      <form action="#" method="get">
-        <input type="search" placeholder="Search...">
-        <button type="submit">🔍</button>
-      </form>
-      <button aria-label="Menu">☰</button>
-    </nav>
-  </header>
+<?php get_header(); ?>
 
   <main>
     <section aria-labelledby="hot-topics">
@@ -50,5 +33,6 @@
   <footer>
     <p>&copy; 2021 News Portal</p>
   </footer>
+  <?php wp_footer(); ?>
 </body>
 </html>
