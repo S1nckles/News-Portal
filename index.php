@@ -66,10 +66,4 @@
     </section>
   </div>
 </main>
-
-<footer>
-  <p>&copy; 2021 News Portal</p>
-</footer>
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>

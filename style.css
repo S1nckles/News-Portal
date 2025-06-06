@@ -53,7 +53,7 @@ body {
 :root{
 	--primary-color: #F8F8F8;
 	--secondary-color: #444444;
-	--footer-color: #949494;
+	--footer-color: #F8F8F8;
 	--background-color: #FDFDFD;
 	--title-color: #121221;
 	--read-more-color: #121221;
@@ -446,4 +446,27 @@ body {
 		font-size: 8px;
 		line-height: 9px;
 	}
+}
+
+/* Footer Styles */
+
+#footer {
+	width: 100%;
+	padding: 31px 0;
+	margin-top: 80px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	background-color: var(--footer-color);
+	color: #949494;
+}
+
+.footer__copyright {
+	font-family: 'Playfair Display',
+	serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 21px;
 }
