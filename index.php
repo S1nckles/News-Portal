@@ -18,14 +18,50 @@
       </div>
     </section>
 
-    <section aria-labelledby="latest-news">
-      <h2 id="latest-news">Latest News</h2>
-      <div class="news-grid">
-        <article>
-          <img src="news1.jpg" alt="">
-          <h3>News Title Lorem Ipsum Dolor Sit Amet</h3>
-          <p><time datetime="2025-06-03T14:00">1 Hour Ago</time>CNN Indonesia</p>
+    <section class="main__news" aria-labelledby="latest-news">
+      <h2 class="news__title">Latest News</h2>
+      <div class="news__list">
+        <article class="news__item">
+        <a class="news_item-image-wrapper" href="#" ><img class="news__item-img" src="<?php echo get_template_directory_uri();?>/assets/images/Rectangle 3.jpg" alt="News Image"></a>
+          <a href="#" class="news__item-title">News Title Lorem Ipsum Dolor Sit Amet</a>
+          <p class="news__item-date"><time datetime="2025-06-03T14:00">1 Hour Ago</time>CNN Indonesia</p>
         </article>
+        <article class="news__item">
+        <a class="news_item-image-wrapper" href="#" ><img class="news__item-img" src="<?php echo get_template_directory_uri();?>/assets/images/Rectangle 3.jpg" alt="News Image"></a>
+          <a href="#" class="news__item-title">News Title Lorem Ipsum Dolor Sit Amet</a>
+          <p class="news__item-date"><time datetime="2025-06-03T14:00">1 Hour Ago</time>CNN Indonesia</p>
+        </article>
+        <article class="news__item">
+        <a class="news_item-image-wrapper" href="#" ><img class="news__item-img" src="<?php echo get_template_directory_uri();?>/assets/images/Rectangle 3.jpg" alt="News Image"></a>
+          <a href="#" class="news__item-title">News Title Lorem Ipsum Dolor Sit Amet</a>
+          <p class="news__item-date"><time datetime="2025-06-03T14:00">1 Hour Ago</time>CNN Indonesia</p>
+        </article>
+        <article class="news__item">
+        <a class="news_item-image-wrapper" href="#" ><img class="news__item-img" src="<?php echo get_template_directory_uri();?>/assets/images/Rectangle 4.jpg" alt="News Image"></a>
+          <a href="#" class="news__item-title">News Title Lorem Ipsum Dolor Sit Amet</a>
+          <p class="news__item-date"><time datetime="2025-06-03T14:00">1 Hour Ago</time>CNN Indonesia</p>
+        </article>
+        <article class="news__item">
+        <a class="news_item-image-wrapper" href="#" ><img class="news__item-img" src="<?php echo get_template_directory_uri();?>/assets/images/Rectangle 8.jpg" alt="News Image"></a>
+          <a href="#" class="news__item-title">News Title Lorem Ipsum Dolor Sit Amet</a>
+          <p class="news__item-date"><time datetime="2025-06-03T14:00">1 Hour Ago</time>CNN Indonesia</p>
+        </article>
+        <article class="news__item">
+        <a class="news_item-image-wrapper" href="#" ><img class="news__item-img" src="<?php echo get_template_directory_uri();?>/assets/images/Rectangle 6.jpg" alt="News Image"></a>
+          <a href="#" class="news__item-title">News Title Lorem Ipsum Dolor Sit Amet</a>
+          <p class="news__item-date"><time datetime="2025-06-03T14:00">1 Hour Ago</time>CNN Indonesia</p>
+        </article>
+        <article class="news__item">
+        <a class="news_item-image-wrapper" href="#" ><img class="news__item-img" src="<?php echo get_template_directory_uri();?>/assets/images/Rectangle 10.jpg" alt="News Image"></a>
+          <a href="#" class="news__item-title">News Title Lorem Ipsum Dolor Sit Amet</a>
+          <p class="news__item-date"><time datetime="2025-06-03T14:00">1 Hour Ago</time>CNN Indonesia</p>
+        </article>
+        <article class="news__item">
+        <a class="news_item-image-wrapper" href="#" ><img class="news__item-img" src="<?php echo get_template_directory_uri();?>/assets/images/Rectangle 3.jpg" alt="News Image"></a>
+          <a href="#" class="news__item-title">News Title Lorem Ipsum Dolor Sit Amet</a>
+          <p class="news__item-date"><time datetime="2025-06-03T14:00">1 Hour Ago</time>CNN Indonesia</p>
+        </article>
+        
       </div>
     </section>
   </div>
