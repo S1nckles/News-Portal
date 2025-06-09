@@ -12,3 +12,48 @@ function mytheme_enqueue_scripts() {
 
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_scripts');
+
+// News Posts 
+
+function register_news_post_type() {
+    register_post_type('news', [
+        'labels' => [
+            'name' => 'News',
+            'singular_name' => 'News Post',
+            'add_new' => 'Add News',
+            'add_new_item' => 'Add New News',
+            'edit_item' => 'Edit News',
+            'new_item' => 'New News',
+            'view_item' => 'View News',
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-media-document',
+        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+        'show_in_rest' => false,
+    ]);
+}
+add_action('init', 'register_news_post_type');
+
+
+// Time Ago Function
+
+function get_time_ago( $time ) {
+    $time_diff = time() - strtotime($time);
+
+    if ($time_diff < 60) {
+        return 'just now';
+    } elseif ($time_diff < 3600) {
+        return floor($time_diff / 60) . ' mins ago';
+    } elseif ($time_diff < 86400) {
+        return floor($time_diff / 3600) . ' hrs ago';
+    } elseif ($time_diff < 604800) {
+        return floor($time_diff / 86400) . ' days ago';
+    } elseif ($time_diff < 2592000) {
+        return floor($time_diff / 604800) . ' weeks ago';
+    } elseif ($time_diff < 31536000) {
+        return floor($time_diff / 2592000) . ' months ago';
+    } else {
+        return floor($time_diff / 31536000) . ' years ago';
+    }
+}
