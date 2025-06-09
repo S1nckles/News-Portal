@@ -34,7 +34,7 @@
               <article class="news__item">
                 <a class="news__item-img" href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('medium'); ?></a>
                 <a class="news__item-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                <p class="news__item-date"><time datetime="2025-06-03T14:00"><?php echo get_time_ago(get_the_date('c'));?></time>
+                <p class="news__post-meta"><time datetime="2025-06-03T14:00"><?php echo get_time_ago(get_the_date('c'));?></time>
                   <?php
                     $categories = get_the_category();
                     if (!empty($categories)) {
