@@ -4,18 +4,46 @@
   <div class="container">
     <section class="main__article">
       <h2 class="main__title">Hot Topics</h2>
+        <?php
+        $hot_news = new WP_Query([
+          'post_type' => 'news',
+          'posts_per_page' => 1,
+          'orderby' => 'date',
+          'order' => 'DESC',
+        ]);
+        ?>
+      <?php if ($hot_news->have_posts()) : while ($hot_news->have_posts()) : $hot_news->the_post(); 
+        $exclude_id = get_the_ID(); 
+      ?>
       <div class="main__content">
         <article class="main__article-review">
-          <img src="<?php echo get_template_directory_uri();?>/assets/images/News-1.jpg" alt="Swimming competition">
+          <?php the_post_thumbnail('large'); ?>
           <div class="main__article-content">
-            <h3 class="main__article-title">Massa tortor nibh nulla condimentum imperdiet scelerisque...</h3>
-            <p class="main__article-date"><time datetime="2025-06-03T13:00">2 Hours Ago</time>CNN Indonesia</p>
+            <a href="<?php the_permalink(); ?>"> <h3 class="main__article-title">Massa tortor nibh nulla condimentum imperdiet scelerisque...</h3></a>
+            
+            <div class="news__post-meta">
+              <span class="main__article-date">
+                  <?php echo get_time_ago(get_the_date('c')); ?> 
+              </span>
+              |
+              <span class="news__item-category">
+                <?php
+                $categories = get_the_category();
+                if (!empty($categories)) {
+                    echo esc_html($categories[0]->name);
+                }
+                ?>
+              </span>
+            </div>
           </div>
         </article>
         <aside class="main__about-article">
-          <p><span>Nisi,</span> sagittis aliquet sit rutrum. Nunc, id vestibulum quam ornare adipiscing. Pellentesque sed turpis nunc gravida pharetra, sit nec vivamus pharetra. Velit, dui, egestas nisi, elementum mattis mauris, magnis. Massa tortor nibh nulla condimentum imperdiet scelerisque...<a href="#"> read more</a></p>
+          <p>
+            <?php echo wp_trim_words(get_the_content(), 60); ?> <a href="<?php the_permalink(); ?>">read more</a>        
+          </p>
         </aside>
       </div>
+      <?php endwhile; wp_reset_postdata(); endif; ?>
     </section>
 
 
@@ -26,7 +54,8 @@
         <?php
         $news_query = new WP_Query([
             'post_type' => 'news',
-            'posts_per_page' => 8
+            'posts_per_page' => 8,
+            'post__not_in' => [$exclude_id],
         ]);
 
         if ($news_query->have_posts()) :
