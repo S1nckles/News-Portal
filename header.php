@@ -11,14 +11,12 @@
 <header id="header">
     <div class="container">
       <nav class="nav">
-        <div class="logo">
+        <a href="/news_portal" class="logo">
           <span>News</span><h1>Portal</h1>
-        </div>
+        </a>
         <div class="nav__list">
-          <div class="nav__search">
-            <input type="text" class="search-input" placeholder="Search..." />
-            <button class="search-btn" type="submit"><img src="<?php echo get_template_directory_uri();?>/assets/images/icons/search-icon.svg" alt="Search"></button>
-          </div>
+          <?php get_search_form(); ?>
+
 
           <button class="menu-btn" aria-label="Menu">
             <span></span>
