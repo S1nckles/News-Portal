@@ -65,6 +65,29 @@ body {
 	padding: 0 15px;
 }
 
+.not-found {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	gap: 20px;
+
+	font-size: 52px;
+	font-weight: 500;
+}
+
+.main__news,
+.search__form {
+	width: 100%;
+	min-height: 100vh;
+	margin-top: 48px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
 /* Header Styles */
 
 #header {
@@ -119,22 +142,6 @@ body {
   align-items: center;
   gap: 5px;
   position: relative;
-}
-.search-input {
-	padding: 5px 10px;
-	color: #000000;
-	border: 1px solid #000000;
-	border-radius: 4px;
-  
-	opacity: 0;
-	visibility: hidden;
-	transform: translateX(10px);
-	transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
-}
-.search-input.active {
-	opacity: 1;
-	visibility: visible;
-	transform: translateX(0);
 }
 .menu__side-panel {
 	position: fixed;
@@ -339,13 +346,6 @@ body {
 
 /* News Styles */
 
-.main__news {
-	margin-top: 48px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
-}
 .news__title {
 	font-family: 'Roboto', serif;
 	font-weight: bold;
@@ -401,7 +401,7 @@ body {
 
 	font-family: "Roboto", serif;
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 14px;
 	color: #949494;
 }
@@ -545,4 +545,76 @@ hr {
 	font-size: 18px;
 	line-height: 180%;
 	color: var(--secondary-color);
+}
+
+/* Search Styles */
+
+.search__form {
+	gap: 50px;
+}
+
+.search__list {
+	flex-direction: column;
+	gap: 36px;
+}
+
+.search__item {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+
+	width: 100%;
+}
+
+.search__img-wrapper {
+	width: 25%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.search__item-content {
+	width: 75%;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+.search__item-title {
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 32px;
+	color: var(--title-color);
+}
+.search__item-excerpt {
+	font-family: 'Roboto', serif;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 180%;
+	color: var(--secondary-color);
+	max-width: 100%;
+}
+
+
+.search-input {
+	width: 0;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(10px);
+	transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+	border: none;
+	outline: none;
+	
+}
+
+.search-input.active {
+	width: 150px;
+	opacity: 1;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 5px 10px;
+	visibility: visible;
+	transform: translateX(0);
 }
