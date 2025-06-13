@@ -1,30 +1,42 @@
 
-## 📰 News Portal — новинний сайт на WordPress
+## 📰 News Portal — WordPress News Website
 
-**Опис:**
-Адаптивний новинний портал, створений з нуля на WordPress без використання конструкторів. Сайт має чисту сіткову структуру, вивід топ-новини (Hot Topics), категоризацію, пошук та архів публікацій.
+**Description:**
+A responsive news portal built from scratch using WordPress without any page builders. The site features a clean grid layout, hot topics section, category filtering, search functionality, and news archive.
 
 ---
 
-### 🔧 Технології:
+### 🔧 Technologies:
 
-* **WordPress** (кастомна тема)
+* **WordPress** (custom theme)
 * **PHP**, **HTML**, **CSS**
-* **WP\_Query**, кастомний тип записів (`news`)
-* Сторінки: `front-page.php`, `archive-news.php`, `single-news.php`, `search.php`, `category.php`
+* **WP\_Query**, custom post type (`news`)
+* Pages: `front-page.php`, `archive-news.php`, `single-news.php`, `search.php`, `category.php`
 
 ---
 
-### 📌 Реалізовано:
+### 📌 Features:
 
-* Вивід гарячої новини з окремим стилем
-* Список останніх новин без дублювання
-* Система категорій
-* Пошук по заголовках і контенту
-* Обмеження довжини заголовків
-* Адаптивна верстка (десктоп, планшет, мобільний)
-* Дата публікації у стилі “2 hours ago”
+* Highlighted hot news block with unique layout
+* Latest news section without repeating top post
+* Category
+* Search functionality by title and content
+* Title length limit for layout consistency
+* Pagination for news listing
+* Fully responsive design (desktop, tablet, mobile)
+* Publication date displayed in relative format (e.g., “2 hours ago”)
 
 ---
 
-> 🔗 *Готовий до розгортання на продакшн або адаптації під реальні клієнтські задачі.*
+> 🔗 *Ready for production deployment or adaptation for real-world client needs.*
+
+---
+
+Photos:
+
+![1440](https://github.com/user-attachments/assets/ac8d830d-ce5c-47cc-a56b-13a7d194b0cb)
+![archive](https://github.com/user-attachments/assets/47fcf793-9ad7-4893-8031-9824846fe350)
+![search](https://github.com/user-attachments/assets/3a7a73f5-a0f4-43c8-a08f-78cb44ea23a6)
+
+
+
