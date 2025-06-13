@@ -30,6 +30,7 @@ function register_news_post_type() {
         'has_archive' => true,
         'menu_icon' => 'dashicons-media-document',
         'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+        'taxonomies' => ['category'],
         'show_in_rest' => false,
     ]);
 }
