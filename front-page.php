@@ -21,12 +21,12 @@
           <div class="main__article-content">
             <a href="<?php the_permalink(); ?>"> <h3 class="main__article-title">Massa tortor nibh nulla condimentum imperdiet scelerisque...</h3></a>
             
-            <div class="news__post-meta">
+            <div class="main__post-meta">
               <span class="main__article-date">
                   <?php echo get_time_ago(get_the_date('c')); ?> 
               </span>
               |
-              <span class="news__item-category">
+              <span class="main__item-category">
                 <?php
                 $categories = get_the_category();
                 if (!empty($categories)) {
@@ -62,8 +62,9 @@
             while ($news_query->have_posts()) : $news_query->the_post(); ?>
               <article class="news__item">
                 <a class="news__item-img" href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('medium'); ?></a>
-                <a class="news__item-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <a class="news__item-title" href="<?php the_permalink(); ?>"><?php echo mb_strimwidth(get_the_title(), 0, 75, '...'); ?></a>
                 <p class="news__post-meta"><time datetime="2025-06-03T14:00"><?php echo get_time_ago(get_the_date('c'));?></time>
+                 <span>|</span>
                   <?php
                     $categories = get_the_category();
                     if (!empty($categories)) {
