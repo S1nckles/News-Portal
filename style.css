@@ -520,6 +520,9 @@ hr {
 	flex-direction: column;
 	gap: 15px;
 }
+.single__news-item img {
+	width: 100%;
+}
 .single__news-title {
 	font-weight: 500;
 }
@@ -618,3 +621,23 @@ hr {
 	visibility: visible;
 	transform: translateX(0);
 }
+  
+/* Category Styles */
+
+.category__filters {
+    margin-bottom: 20px;
+}
+.category__link {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+.category__link:hover {
+    text-decoration: underline;
+}
+
+.category__link.active {
+    font-weight: bold;
+    color: #000;
+}
+
