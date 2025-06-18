@@ -9,7 +9,7 @@ A responsive news portal built from scratch using WordPress without any page bui
 ### 🔧 Technologies:
 
 * **WordPress** (custom theme)
-* **PHP**, **HTML**, **CSS**
+* **PHP**, **HTML**, **CSS**, **JS**
 * **WP\_Query**, custom post type (`news`)
 * Pages: `front-page.php`, `archive-news.php`, `single-news.php`, `search.php`, `category.php`
 
@@ -22,7 +22,6 @@ A responsive news portal built from scratch using WordPress without any page bui
 * Category
 * Search functionality by title and content
 * Title length limit for layout consistency
-* Pagination for news listing
 * Fully responsive design (desktop, tablet, mobile)
 * Publication date displayed in relative format (e.g., “2 hours ago”)
 
